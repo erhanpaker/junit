@@ -27,7 +27,7 @@ public class testBateMetod {
     @After
 
     public  void teardown(){
-        driver.close();
+        driver.quit();
 
     }
 }
