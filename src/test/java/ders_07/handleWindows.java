@@ -45,6 +45,13 @@ public class handleWindows extends TestBaseClass {
 
         Assert.assertTrue(acualSonucYazisi.contains(expectedIcerik));
 
+        // 1:30 dk
+
+        String ilksayfaWindowhandle = driver.getWindowHandle();
+        driver.switchTo().newWindow(WindowType.TAB);
+        driver.get("https://www.amazon.com");
+
+
 
 
 
