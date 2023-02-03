@@ -10,7 +10,7 @@ public class c03_windowHandle extends TestBaseClass {
 
     @Test
 
-    public void test01(){
+    public void test01() throws InterruptedException {
         driver.get("https://the-internet.herokuapp.com/windows");
         WebElement yaziElementi = driver.findElement(By.tagName("h3"));
 
@@ -18,6 +18,12 @@ public class c03_windowHandle extends TestBaseClass {
         String actualYazi = yaziElementi.getText();
 
         Assert.assertEquals(expectedYazi,actualYazi);
+        String ilksayfaWindowhandle = driver.getWindowHandle();
+        driver.findElement(By.xpath("//*[text()='Click Here']")).click();
+
+
+
+        Thread.sleep(5000);
 
 
     }
