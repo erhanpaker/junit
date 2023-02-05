@@ -20,7 +20,41 @@ public class hando extends TestBaseClass {
 
         driver.get("https://www.facebook.com/");
 
-        driver.findElement(By.xpath("//button[@class='_6j mvm _6wk _6wl _58mi _3ma _6o _6v']"));
+        driver.findElement(By.linkText("Create new account")).click();
+
+       WebElement isimKutusu = driver.findElement(By.xpath("//input[@name='firstname']"));
+       Actions actions = new Actions( driver);
+       String mail=faker.internet().emailAddress();
+
+
+
+       actions.click(isimKutusu)
+               .sendKeys(faker.name().firstName())
+               .sendKeys(Keys.TAB)
+               .sendKeys(faker.name().lastName())
+                       .sendKeys(Keys.TAB)
+               .sendKeys(mail)
+               .sendKeys(Keys.TAB)
+               .sendKeys(mail)
+               .sendKeys(faker.internet().password())
+               .sendKeys(Keys.TAB)
+               .sendKeys(Keys.TAB)
+               .sendKeys("12")
+               .sendKeys(Keys.TAB)
+               .sendKeys("feb")
+               .sendKeys(Keys.TAB)
+               .sendKeys("1999")
+               .sendKeys(Keys.TAB)
+               .sendKeys(Keys.TAB)
+               .sendKeys(Keys.ARROW_RIGHT)
+               .sendKeys(Keys.TAB)
+               .sendKeys(Keys.TAB)
+               .sendKeys(Keys.TAB)
+               .sendKeys(Keys.TAB)
+               .sendKeys(Keys.TAB)
+               .sendKeys(Keys.ENTER).perform();
+
+
 
 
 
