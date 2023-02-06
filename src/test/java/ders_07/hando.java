@@ -36,6 +36,7 @@ public class hando extends TestBaseClass {
                .sendKeys(mail)
                .sendKeys(Keys.TAB)
                .sendKeys(mail)
+               .sendKeys(Keys.TAB)
                .sendKeys(faker.internet().password())
                .sendKeys(Keys.TAB)
                .sendKeys(Keys.TAB)
@@ -53,6 +54,8 @@ public class hando extends TestBaseClass {
                .sendKeys(Keys.TAB)
                .sendKeys(Keys.TAB)
                .sendKeys(Keys.ENTER).perform();
+
+       // 50 dk
 
 
 
