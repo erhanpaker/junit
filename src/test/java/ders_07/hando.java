@@ -42,6 +42,7 @@ public class hando extends TestBaseClass {
                .sendKeys(Keys.TAB)
                .sendKeys("12")
                .sendKeys(Keys.TAB)
+               .sendKeys(Keys.TAB)
                .sendKeys("feb")
                .sendKeys(Keys.TAB)
                .sendKeys("1999")
@@ -54,23 +55,6 @@ public class hando extends TestBaseClass {
                .sendKeys(Keys.TAB)
                .sendKeys(Keys.TAB)
                .sendKeys(Keys.ENTER).perform();
-
-       // 50 dk
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 
 }
