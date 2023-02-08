@@ -2,6 +2,7 @@ package ders_07;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.AfterClass;
+import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
@@ -33,7 +34,17 @@ public class fıle_testlerı extends TestBaseClass {
 
         }
 
+        Assert.assertTrue(CookiesSeti.size()>5);
+
+        String expectedDeger="USD";
+        String actualDeger = driver.manage().getCookieNamed("i18n-prefs").toString();
+
+
+
         Thread.sleep(3000);
+
+
+        // 9 viedo 1 saat devam
 
 
 
