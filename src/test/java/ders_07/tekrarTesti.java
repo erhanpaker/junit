@@ -14,7 +14,7 @@ public class tekrarTesti extends TestBaseClass {
 
 
 
-        7- sonuc sayisinin 10 milyon’dan fazla oldugunu test edin
+
         8- Sayfayi kapatin*/
 
     @Test
@@ -43,6 +43,29 @@ public class tekrarTesti extends TestBaseClass {
 
         //6- Bulunan sonuc sayisini yazdirin
         System.out.println(driver.findElement(By.xpath("//div[@id='result-stats']")).getText());
+
+        //7- sonuc sayisinin 10 milyon’dan fazla oldugunu test edin
+        WebElement result = driver.findElement(By.xpath("//div[@id='result-stats']"));
+        int baslangic =result.getText().indexOf(" ", result.getText().indexOf("Yaklaşık") + 1);
+        int bitis = result.getText().indexOf(" sonuç");
+        String sonuc = result.getText().substring(baslangic+1, bitis);
+        int intSonuc = Integer.parseInt(sonuc.replace(".", ""));
+        if (intSonuc > 10000000) {
+            System.out.println("10Milyondan fazla, Test PASSED");
+
+        } else {
+
+            System.out.println("10 Milyondan az, Test FAILED");
+
+           // 8- Sayfayi kapatin*
+
+            driver.close();
+
+
+
+        }
+
+
 
 
 
